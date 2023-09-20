@@ -38,5 +38,5 @@ if (foundedElement) {
   rootInnerText += `\nThe index isn't in the array`;
 }
 
-rootElement.innerText = message;
-console.log(message);
+rootElement.innerText = rootInnerText;
+console.log(rootInnerText);
