@@ -18,7 +18,7 @@ const searchElementOnArray = (arr, element) => {
 };
 const searchIndexOnArray = (arr, index) => {
   try {
-    return arr[îndex];
+    return arr[index];
   } catch (e) {
     return null;
   }
