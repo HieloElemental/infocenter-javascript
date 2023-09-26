@@ -38,5 +38,37 @@ if (foundedElement) {
   rootInnerText += `\nThe index isn't in the array`;
 }
 
+let galaxiesStars = [34, 56, 2, 96, 49];
+const countStarts = (galaxiesStarsQuantity) => {
+  let count = 0;
+  for (let i = 0; i < galaxiesStarsQuantity.length; i++) {
+    if (galaxiesStarsQuantity[i] > 0) {
+      count++;
+    }
+  }
+  return count;
+};
+rootInnerText += `\nTotal starts: ${countStarts(galaxiesStars)}`;
+
+let nameList = [
+  "Sophie",
+  "Maria",
+  "Daniel",
+  "John",
+  "Sebastian",
+  "Hanna",
+  "Merlinda",
+];
+const sayHiTo = (name) => `Hi ${name}`;
+const sayHiToPeople = (names) => {
+  let res = "";
+  names.forEach((name) => {
+    res += `\n${sayHiTo(name)}`;
+  });
+  return res;
+};
+rootInnerText += `\nThe names quantity is ${nameList.length}`;
+rootInnerText += `${sayHiToPeople(nameList)}`;
+
 rootElement.innerText = rootInnerText;
 console.log(rootInnerText);
