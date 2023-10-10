@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Neue", cursive;
+}
+
+body {
+  background: url("https://static.vecteezy.com/system/resources/thumbnails/007/143/834/small/old-wood-texture-for-pattern-background-home-shop-and-cafe-design-backdrop-paint-wooden-wall-and-copy-space-photo.jpg")
+    fixed center center/cover;
+}
+
+.products-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.products-list h1 {
+  text-align: center;
+  color: aqua;
+  font-size: 20px;
+}
+
+.products-list li {
+  min-width: 150px;
+  max-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgb(10, 10, 10);
+}
+
+.products-list li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.products-list img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
