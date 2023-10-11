@@ -25,6 +25,7 @@ const loadSite = async () => {
       break;
     case "/products":
       addElement(await productsListPage());
+      break;
   }
   rootElement.innerHTML = innerHTML;
   styleElement.innerHTML = innerCSS;
