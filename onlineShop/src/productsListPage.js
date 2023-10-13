@@ -23,7 +23,7 @@ const productsListPage = async () => {
               <h1>${product.title}</h1>
               <img src="${product.image}">
               <p>${product.description}</p>
-              ${button("Más Información").html}
+              ${button("Más Información", `setItem(${product.id})`).html}
               `).html
             }</li>
             `;

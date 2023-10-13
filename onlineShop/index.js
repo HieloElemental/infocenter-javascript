@@ -1,6 +1,7 @@
 import getNavbar from "./src/navbar.js";
 import normalize from "./src/normalize.js";
 import productsListPage from "./src/productsListPage.js";
+import item from "./src/item.js";
 import startPage from "./src/startPage.js";
 
 const rootElement = document.getElementById("root");
@@ -25,6 +26,9 @@ const loadSite = async () => {
       break;
     case "/products":
       addElement(await productsListPage());
+      break;
+    case "/item":
+      addElement(await item(localStorage.getItem("itemId")));
       break;
   }
   rootElement.innerHTML = innerHTML;

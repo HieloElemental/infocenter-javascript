@@ -11,7 +11,13 @@
 <body>
   <div id="root"></div>
   <script>
+    function setItem(itemId) {
+      setDirection("/item");
+      localStorage.setItem("itemId", itemId);
+    }
+
     function setDirection(direction) {
+      localStorage.removeItem("itemId");
       localStorage.setItem("direction", direction);
       window.dispatchEvent(new Event("localStorageUpdated"));
     }

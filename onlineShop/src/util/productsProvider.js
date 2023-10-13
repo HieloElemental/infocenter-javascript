@@ -1,7 +1,12 @@
 const getProducts = async () => {
-  let products = await fetch("https://fakestoreapi.com/products");
-  let data = products.json();
-  return data;
+  let localStorageProducts = await localStorage.getItem("products");
+  if (!localStorageProducts) {
+    let products = await fetch("https://fakestoreapi.com/products");
+    let data = await products.json();
+    localStorage.setItem("products", JSON.stringify(data));
+    return data;
+  }
+  return JSON.parse(localStorageProducts);
 };
 
 export default getProducts;

@@ -1,6 +1,6 @@
-const button = (text) => {
+const button = (text, onClick) => {
   return {
-    html: `<div class="button">${text}</d>`,
+    html: `<div class="button" onClick="${onClick}">${text}</d>`,
     css: `
     .button {
       background-color: #4CAF50;
