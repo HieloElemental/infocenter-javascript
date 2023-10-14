@@ -1,6 +1,6 @@
-import content from "./content.js";
-import button from "./button.js";
-import getProducts from "./util/productsProvider.js";
+import content from "../components/content.js";
+import button from "../components/button.js";
+import getProducts from "../util/productsProvider.js";
 
 const item = async (itemId) => {
   let products = await getProducts();

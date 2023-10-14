@@ -1,8 +1,8 @@
-import getNavbar from "./src/navbar.js";
-import normalize from "./src/normalize.js";
-import productsListPage from "./src/productsListPage.js";
-import item from "./src/item.js";
-import startPage from "./src/startPage.js";
+import getNavbar from "./src/components/navbar.js";
+import normalize from "./src/util/normalize.js";
+import productsListPage from "./src/routes/productsListPage.js";
+import item from "./src/routes/item.js";
+import startPage from "./src/routes/startPage.js";
 
 const rootElement = document.getElementById("root");
 let innerHTML = "";

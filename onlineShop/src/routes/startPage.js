@@ -1,6 +1,6 @@
 import titles from "./titles.js";
-import content from "./content.js";
-import card from "./card.js";
+import content from "../components/content.js";
+import card from "../components/card.js";
 
 const startPage = () => {
   let titlesElement = titles("OnlineShop", "Tu tienda, mi tienda");

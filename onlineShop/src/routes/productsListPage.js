@@ -1,8 +1,8 @@
-import card from "./card.js";
-import content from "./content.js";
+import card from "../components/card.js";
+import content from "../components/content.js";
 import titles from "./titles.js";
-import getProducts from "./util/productsProvider.js";
-import button from "./button.js";
+import getProducts from "../util/productsProvider.js";
+import button from "../components/button.js";
 
 const productsListPage = async () => {
   let titlesElement = titles("OnlineShop", "Productos");
