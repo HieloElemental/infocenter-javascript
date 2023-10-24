@@ -18,7 +18,7 @@ const item = async (itemId) => {
         <br>
         <h3>Precio</h3><p>${productItem.price}</p>
         <br>
-        ${button("Comprar").html}
+        ${button("Comprar", `addProduct(${productItem.id})`).html}
       </div>
     </div>
   `);

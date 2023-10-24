@@ -21,6 +21,18 @@
       localStorage.setItem("direction", direction);
       window.dispatchEvent(new Event("localStorageUpdated"));
     }
+
+    function addProduct(productId) {
+      try {
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        let isAlready = cartItems.filter((cartItem) => cartItem.productId == productId);
+        if (isAlready.length > 0) {
+          return 0;
+        }
+        cartItems.push({ productId, amount: 1 });
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      } catch (e) { }
+    }
   </script>
   <script type="module" src="./index.js"></script>
 </body>

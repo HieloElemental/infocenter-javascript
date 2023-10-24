@@ -2,6 +2,7 @@ import getNavbar from "./src/components/navbar.js";
 import normalize from "./src/util/normalize.js";
 import productsListPage from "./src/routes/productsListPage.js";
 import item from "./src/routes/item.js";
+import cart from "./src/routes/cart.js";
 import startPage from "./src/routes/startPage.js";
 
 const rootElement = document.getElementById("root");
@@ -30,6 +31,8 @@ const loadSite = async () => {
     case "/item":
       addElement(await item(localStorage.getItem("itemId")));
       break;
+    case "/cart":
+      addElement(await cart());
   }
   rootElement.innerHTML = innerHTML;
   styleElement.innerHTML = innerCSS;
