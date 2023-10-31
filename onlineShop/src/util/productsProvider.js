@@ -2,7 +2,7 @@ const getProducts = async () => {
   const now = Date.now();
   const then = parseInt(localStorage.getItem("required"), 10);
 
-  if (then && now - then < 5 * 60 * 1000) {
+  if (then && now - then < 300000) {
     const localStorageProducts = localStorage.getItem("products");
     if (localStorageProducts) {
       return JSON.parse(localStorageProducts);
