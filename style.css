@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+:root {
+  --primary-color: #59abbe;
+  --primary-color-rgb: 89, 173, 191;
+  --primary-dark-color: #3d7582;
+  --primary-dark-color-rgb: 90, 172, 191;
+
+  --light-color: #d4eeff;
+  --light-color-rgb: 212, 238, 255;
+  --dark-color: #1c2227;
+  --dark-color-rgb: 28, 34, 39;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #474747 #1c2227;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1c2227;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #474747;
+  border-radius: 10px;
+  border: 0px none #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Neue", cursive;
+}
+
+body {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+header {
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(var(--dark-color-rgb), 0.5),
+      rgba(var(--dark-color-rgb), 0.9)
+    ),
+    url("./img/banner.png") fixed center center/cover;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--light-color);
+  box-shadow: 0px 0px 80px #000;
+}
+
+header > h1 {
+  font-size: 80px;
+}
+
+header > h2 {
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+nav.nav-on-top {
+  --navbar-height: 80px;
+  background: rgba(var(--dark-color-rgb), 0.7);
+}
+
+nav {
+  --navbar-height: 70px;
+  background-color: #1c2227;
+  box-shadow: 0px 0px 80px #000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: var(--navbar-height);
+  font-size: 28px;
+  transition: 0.5s ease-in-out;
+}
+
+nav * {
+  transition: 0.5s ease-in-out;
+}
+
+nav a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: var(--navbar-height);
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+nav ul {
+  font-weight: 700;
+  list-style: none;
+  padding-left: 20px;
+}
+
+nav,
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-open {
+  display: none;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.nav-open a,
+.nav-open li {
+  width: var(--navbar-height);
+  padding: 0;
+}
+
+.nav-open svg {
+  margin: 10px;
+}
+
+.nav-open svg path {
+  stroke: var(--light-color);
+}
+
+@media screen and (max-width: 850px) {
+  .nav-open {
+    display: inline-block;
+  }
+  .nav-on-top .nav-links {
+    background: rgba(var(--dark-color-rgb), 0.5);
+  }
+  .nav-links {
+    padding: 0;
+    background: rgba(var(--dark-color-rgb), 0.85);
+    width: 70%;
+    position: fixed;
+    top: var(--navbar-height);
+    left: -70%;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: calc(100vh - var(--navbar-height));
+
+    transition: 0.5s ease-in-out;
+  }
+  .nav-opened .nav-links {
+    left: 0;
+  }
+  .nav-links li,
+  .nav-links a {
+    padding: 0;
+    width: 100%;
+  }
+  .nav-links a {
+    height: 70px;
+    border-bottom: 3px solid rgba(var(--light-color-rgb), 0.2);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header > h1 {
+    font-size: 50px;
+  }
+  header > h2 {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+}
