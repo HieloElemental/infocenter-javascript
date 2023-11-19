@@ -85,6 +85,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 
   width: 100vw;
   height: var(--navbar-height);
@@ -93,7 +94,7 @@ nav {
 }
 
 nav * {
-  transition: 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
 }
 
 nav a {
@@ -141,6 +142,38 @@ nav ul {
   stroke: var(--light-color);
 }
 
+.container {
+  padding: 40px;
+  text-shadow: 4px 4px 30px #000;
+  font-size: 30px;
+}
+
+.container h1 {
+  font-size: 80px;
+}
+
+.container h2 {
+  font-size: 40px;
+}
+
+.pfp {
+  border-radius: 50%;
+  width: 100%;
+  box-shadow: 4px 4px 30px #000;
+}
+
+.two-rows {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+}
+
+.two-rows > * {
+  max-width: 45%;
+}
+
 @media screen and (max-width: 850px) {
   .nav-open {
     display: inline-block;
@@ -182,5 +215,17 @@ nav ul {
   header > h2 {
     font-size: 30px;
     letter-spacing: 5px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .two-rows {
+    flex-direction: column;
+  }
+  .two-rows > * {
+    max-width: 100%;
+  }
+  .container h1 {
+    font-size: 60px;
   }
 }
