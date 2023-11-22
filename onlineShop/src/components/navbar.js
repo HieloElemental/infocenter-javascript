@@ -1,4 +1,4 @@
-const cartItems = JSON.parse(localStorage.getItem("cartItems")).length || 0;
+const cartItems = JSON.parse(localStorage.getItem("cartItems"))?.length || 0;
 
 const navbarLinks = [
   { displayName: "Inicio", href: "/" },
