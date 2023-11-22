@@ -31,6 +31,7 @@
         }
         cartItems.push({ productId, amount: 1 });
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        location.reload();
       } catch (e) { }
     }
 

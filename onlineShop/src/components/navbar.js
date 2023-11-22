@@ -1,7 +1,14 @@
+const cartItems = JSON.parse(localStorage.getItem("cartItems")).length || 0;
+
 const navbarLinks = [
-  { displayName: "Inico", href: "/" },
+  { displayName: "Inicio", href: "/" },
   { displayName: "Productos", href: "/products" },
-  { displayName: "Carrito", href: "/cart" },
+  {
+    displayName: `Carrito${
+      cartItems ? `<span class="cartCant">${cartItems}</span>` : ""
+    }`,
+    href: "/cart",
+  },
 ];
 
 const getNavbar = (changeDirection) => {
@@ -63,6 +70,22 @@ const getNavbar = (changeDirection) => {
       nav ul.links li div{
         height: 60px;
         padding: 20px;
+      }
+
+      .cartCant {
+        display: flex;
+        position: relative;
+        top: -7px;
+        left: 46px;
+        background: white;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        font-size: 12px;
+        color: black;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
       }
 
       body {

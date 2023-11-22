@@ -27,7 +27,7 @@ const cart = async () => {
               <div>
                 <button onClick='addItem(${i}, true)'>-</button>
                 <button onClick='addItem(${i}, false)'>+</button>
-                <button onClick='removeProduct(${i})'>%</button>
+                <button onClick='removeProduct(${i})'>Remover</button>
               </div>
             </div>
             <div class="amount">
