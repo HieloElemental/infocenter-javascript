@@ -33,6 +33,28 @@
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
       } catch (e) { }
     }
+
+    function removeProduct(arrayId) {
+      try {
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        cartItems.splice(arrayId, 1);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        location.reload();
+      } catch (e) { }
+    }
+
+    function addItem(i, isSubtraction) {
+      let newItems = JSON.parse(localStorage.getItem("cartItems"));
+      if (isSubtraction) {
+        if (newItems[i].amount > 1) {
+          newItems[i].amount--
+        }
+      } else {
+        newItems[i].amount++;
+      }
+      localStorage.setItem("cartItems", JSON.stringify(newItems));
+      location.reload();
+    }
   </script>
   <script type="module" src="./index.js"></script>
 </body>
